@@ -164,10 +164,149 @@ function animateMatchCount(el) {
   }, 16);
 }
 
-document.getElementById("restart-btn").addEventListener("click", () => {
-  Object.keys(answers).forEach(k => delete answers[k]);
-  document.getElementById("quiz-step").classList.remove("hidden");
-  document.getElementById("analyzing-step").classList.add("hidden");
-  document.getElementById("entry-step").classList.remove("hidden");
-  showPage("page-quiz");
+
+// ==================== COMPARE FEATURE ====================
+let selectedCareers = [];
+
+function updateCompareBar() {
+  const bar = document.getElementById("compare-bar");
+  const pillA = document.getElementById("compare-a");
+  const pillB = document.getElementById("compare-b");
+  const btn = document.getElementById("compare-btn");
+  const resultBox = document.getElementById("compare-result");
+
+  if (selectedCareers.length === 0) {
+    bar.classList.add("hidden");
+    resultBox.classList.add("hidden");
+    return;
+  }
+
+  bar.classList.remove("hidden");
+  pillA.textContent = selectedCareers[0] ? selectedCareers[0].title : "—";
+  pillB.textContent = selectedCareers[1] ? selectedCareers[1].title : "—";
+  btn.disabled = selectedCareers.length !== 2;
+}
+
+// Make career cards selectable (max 2)
+const originalRenderCareerGrid = renderCareerGrid;
+renderCareerGrid = function () {
+  originalRenderCareerGrid();
+
+  document.querySelectorAll(".career-card").forEach((card, i) => {
+    // Find the career object that matches this card
+    const title = card.querySelector(".career-title").textContent;
+    const career = allMatches.find(c => c.title === title);
+    if (!career) return;
+
+    // Restore selected state if already chosen
+    if (selectedCareers.some(c => c.title === career.title)) {
+      card.classList.add("selected-for-compare");
+    }
+
+    card.style.cursor = "pointer";
+    card.addEventListener("click", () => {
+      const idx = selectedCareers.findIndex(c => c.title === career.title);
+
+      if (idx > -1) {
+        // deselect
+        selectedCareers.splice(idx, 1);
+        card.classList.remove("selected-for-compare");
+      } else {
+        if (selectedCareers.length >= 2) return; // already have two
+        selectedCareers.push(career);
+        card.classList.add("selected-for-compare");
+      }
+      updateCompareBar();
+    });
+  });
+};
+
+// Compare button
+document.getElementById("compare-btn").addEventListener("click", async () => {
+  if (selectedCareers.length !== 2) return;
+
+  const resultBox = document.getElementById("compare-result");
+  resultBox.classList.remove("hidden");
+  resultBox.innerHTML = `<div class="analyzing-text">Comparing…</div>`;
+
+  try {
+    const res = await fetch("/api/compare", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        sessionId,
+        careerA: selectedCareers[0],
+        careerB: selectedCareers[1],
+      }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Compare failed");
+
+    resultBox.innerHTML = `
+      <h3>Head-to-Head Comparison</h3>
+      <div class="compare-grid">
+        <div class="compare-side">
+          <div class="title">${data.careerA.title}</div>
+          <div class="pct">${data.careerA.matchPercent}% match</div>
+          <div class="meta">
+            <strong>Top traits:</strong> ${data.careerA.traits.join(", ") || "—"}<br>
+            <strong>Unique skills:</strong> ${data.careerA.uniqueSkills.join(", ") || "None"}
+          </div>
+        </div>
+        <div class="compare-side">
+          <div class="title">${data.careerB.title}</div>
+          <div class="pct">${data.careerB.matchPercent}% match</div>
+          <div class="meta">
+            <strong>Top traits:</strong> ${data.careerB.traits.join(", ") || "—"}<br>
+            <strong>Unique skills:</strong> ${data.careerB.uniqueSkills.join(", ") || "None"}
+          </div>
+        </div>
+      </div>
+      <div class="meta" style="margin-bottom:10px">
+      </div>
+      <div class="compare-verdict">${data.verdict}</div>
+    `;
+  } catch (err) {
+    resultBox.innerHTML = `<div class="msg error">Could not compare. Please try again.</div>`;
+  }
+});
+
+// ==================== DOWNLOAD REPORT ====================
+document.getElementById("download-report-btn").addEventListener("click", () => {
+  if (!allMatches.length) {
+    alert("No results to download yet.");
+    return;
+  }
+
+  let report = "METANOIA — Career Discovery Report\n";
+  report += "====================================\n\n";
+  report += `Session ID: ${sessionId}\n`;
+  report += `Date: ${new Date().toLocaleString()}\n\n`;
+
+  // Recommendations
+  report += "YOUR TOP CAREER MATCHES\n";
+  report += "-----------------------\n";
+  allMatches.forEach((c, i) => {
+    report += `${i + 1}. ${c.title} — ${c.matchPercent}% match\n`;
+    report += `   ${c.description}\n`;
+    report += `   Skills: ${(c.skills || []).join(", ")}\n\n`;
+  });
+
+  // Comparison (if user did one)
+  if (selectedCareers.length === 2) {
+    report += "HEAD-TO-HEAD COMPARISON\n";
+    report += "-----------------------\n";
+    report += `A: ${selectedCareers[0].title}\n`;
+    report += `B: ${selectedCareers[1].title}\n\n`;
+  }
+
+  // Create and download the file
+  const blob = new Blob([report], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `metanoia-report-${sessionId}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
 });
