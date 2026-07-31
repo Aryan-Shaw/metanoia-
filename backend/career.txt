@@ -1,0 +1,200 @@
+---
+Metanoia Career Website
+# Career Database
+
+Metanoia maintains a continuously expanding database of careers across multiple industries and academic disciplines. Each career profile is carefully structured using standardized information so that recommendations remain consistent, explainable, and easy for users to understand.
+
+Every career profile includes:
+
+* Career title
+* Career category
+* Short overview
+* Primary responsibilities
+* Core technical skills
+* Essential soft skills
+* Educational pathways
+* Recommended certifications (where applicable)
+* Typical work environments
+* Future demand outlook
+* Related careers
+* Trait profile used for compatibility matching
+
+The database is reviewed periodically to reflect changes in technology, education, labor market trends, and emerging industries. New careers may be added as industries evolve.
+
+Current career domains include, but are not limited to:
+
+* Computer Science
+* Artificial Intelligence
+* Machine Learning
+* Data Science
+* Cybersecurity
+* Software Engineering
+* Web Development
+* Cloud Computing
+* Mechanical Engineering
+* Civil Engineering
+* Electrical Engineering
+* Architecture
+* Biotechnology
+* Medicine
+* Nursing
+* Pharmacy
+* Psychology
+* Law
+* Finance
+* Accounting
+* Economics
+* Marketing
+* Digital Marketing
+* Human Resources
+* Business Administration
+* Entrepreneurship
+* Graphic Design
+* UI/UX Design
+* Animation
+* Film & Media
+* Journalism
+* Education
+* Environmental Science
+* Agriculture
+* Hospitality
+* Aviation
+* Public Administration
+* Defence Services
+* Research
+* Consulting
+* Supply Chain & Logistics
+* Sports Management
+* Product Management
+
+The platform does not rank careers by prestige or salary. Recommendations are based on compatibility with the user's assessment profile.
+
+---
+
+# AI Assistant Guidelines
+
+The AI assistant is an educational guide that helps users understand careers and assessment results. It should provide balanced, practical, and easy-to-understand information while avoiding misleading claims.
+
+The assistant should:
+
+* Explain quiz questions when users are unsure.
+* Describe how compatibility scores are calculated at a high level.
+* Explain why a career appears in the user's results.
+* Compare careers objectively.
+* Suggest practical ways to develop relevant skills.
+* Recommend learning resources, certifications, projects, internships, or extracurricular activities.
+* Encourage exploration rather than pushing a single career choice.
+* Explain that interests and career goals can change over time.
+* Use clear, supportive, and encouraging language.
+* Admit uncertainty when information is unavailable.
+
+The assistant should **not**:
+
+* Guarantee jobs, salaries, admissions, or success.
+* Claim the assessment is perfectly accurate.
+* Discourage users from exploring careers outside their recommendations.
+* Replace professional career counselors, teachers, mentors, psychologists, or academic advisors.
+* Invent facts or make unsupported claims.
+
+---
+
+# Frequently Asked Questions
+
+### Is the assessment a personality test?
+
+No. The assessment focuses on career-related interests, strengths, and working preferences rather than assigning personality types.
+
+### Are there right or wrong answers?
+
+No. Honest responses produce the most meaningful recommendations.
+
+### Why did I receive multiple career recommendations?
+
+Many careers require similar combinations of interests and skills. Multiple recommendations give users more options to explore.
+
+### Why didn't a specific career appear?
+
+Only careers with a compatibility score of 50% or higher are displayed. A lower score does not mean the career is impossible—it simply indicates weaker alignment with the assessment results.
+
+### Can I retake the quiz?
+
+Yes. Users can retake the assessment as many times as they wish. Interests and goals often evolve with new experiences.
+
+### Do I need an account?
+
+No. The assessment can be completed without creating an account or signing in.
+
+### Does the quiz use my school grades?
+
+No. Recommendations are based primarily on assessment responses, not academic marks.
+
+### Can the AI choose my career for me?
+
+No. The AI provides guidance and information to support decision-making. The final career choice always belongs to the user.
+
+---
+
+# Privacy & Data Handling
+
+Metanoia values user privacy and aims to collect only the information necessary to provide meaningful recommendations.
+
+General principles include:
+
+* No account is required to complete the assessment.
+* Users may access recommendations without registration.
+* Assessment responses are used solely to generate career matches.
+* Personal information should be collected only when necessary for optional platform features.
+* Users should not be required to share sensitive personal information to receive career guidance.
+
+Privacy practices may evolve as new platform features are introduced.
+
+---
+
+# Support
+
+Users who need additional guidance can:
+
+* Retake the assessment.
+* Ask the AI assistant for clarification.
+* Explore alternative careers suggested in the results.
+* Learn about required education and skills.
+* Compare multiple career paths before making decisions.
+
+The platform encourages continuous learning and self-reflection rather than one-time decision making.
+
+---
+
+# Educational Disclaimer
+
+Metanoia is designed for educational and informational purposes only.
+
+Career recommendations are generated using compatibility scoring based on user responses. They should not be interpreted as guarantees of career success, admission into educational institutions, or employment opportunities.
+
+Career decisions are influenced by many factors including education, experience, motivation, financial circumstances, geographic location, changing industry trends, and personal preferences.
+
+Users are encouraged to supplement Metanoia's recommendations with advice from teachers, mentors, counselors, professionals, internships, and real-world experiences.
+
+---
+
+# Future Development
+
+Metanoia is continuously evolving to improve the quality and usefulness of its recommendations. Planned enhancements may include:
+
+* Expanded career database.
+* More detailed assessments.
+* Skill gap analysis.
+* Personalized learning roadmaps.
+* College and degree recommendations.
+* Scholarship information.
+* Resume and portfolio guidance.
+* Interview preparation resources.
+* Internship suggestions.
+* Career trend analysis using AI.
+
+Future features will continue to prioritize accessibility, fairness, transparency, and user-centered design.
+
+---
+
+# Philosophy
+
+Metanoia believes that meaningful careers begin with meaningful self-understanding. Every individual possesses a unique combination of interests, abilities, values, and ambitions that cannot be measured by grades or social expectations alone. By combining thoughtful self-reflection with intelligent technology, Metanoia helps users explore careers that align with who they are today while encouraging growth into who they aspire to become. Rather than defining success through a single profession, Metanoia encourages lifelong learning, curiosity, adaptability, and purpose. Our goal is to help every user discover opportunities that are both personally fulfilling and professionally rewarding—staying true to the meaning of Metanoia: **finding your own meaning of life**.
