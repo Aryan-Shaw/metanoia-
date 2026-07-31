@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q1",
+    "text": "How do you prefer to spend a free afternoon?",
+    "options": [
+      { "icon": "🧩", "label": "Solving a tricky puzzle or brain teaser", "weights": { "analytical": 2, "research": 1 } },
+      { "icon": "🎨", "label": "Sketching, writing, or making something", "weights": { "creative": 3 } },
+      { "icon": "👥", "label": "Hanging out with a big group of friends", "weights": { "social": 2, "communication": 1 } },
+      { "icon": "🔧", "label": "Tinkering with gadgets or building something", "weights": { "technical": 2, "handsOn": 2 } }
+    ]
+  },
+  {
+    "id": "q2",
+    "text": "In a group project, you naturally end up...",
+    "options": [
+      { "icon": "🧭", "label": "Organizing the team and setting the plan", "weights": { "leadership": 3, "communication": 1 } },
+      { "icon": "📊", "label": "Digging into the data and details", "weights": { "analytical": 3, "research": 1 } },
+      { "icon": "💡", "label": "Coming up with the big creative idea", "weights": { "creative": 2, "entrepreneurial": 1 } },
+      { "icon": "🤝", "label": "Making sure everyone feels heard", "weights": { "caring": 2, "communication": 2 } }
+    ]
+  },
+  {
+    "id": "q3",
+    "text": "Which work environment appeals to you most?",
+    "options": [
+      { "icon": "🔬", "label": "A lab or research setting", "weights": { "research": 3, "analytical": 1 } },
+      { "icon": "🖌️", "label": "A busy studio full of ideas", "weights": { "creative": 3 } },
+      { "icon": "🛠️", "label": "Out in the field, hands-on", "weights": { "handsOn": 3, "technical": 1 } },
+      { "icon": "🚀", "label": "A fast-moving startup", "weights": { "entrepreneurial": 3, "leadership": 1 } }
+    ]
+  },
+  {
+    "id": "q4",
+    "text": "What kind of problem excites you most?",
+    "options": [
+      { "icon": "❤️", "label": "Helping someone through a hard time", "weights": { "caring": 3, "communication": 1 } },
+      { "icon": "🧰", "label": "Figuring out why something's broken", "weights": { "technical": 2, "handsOn": 1 } },
+      { "icon": "🔢", "label": "Finding patterns hidden in numbers", "weights": { "analytical": 3 } },
+      { "icon": "📣", "label": "Pitching a bold new idea", "weights": { "entrepreneurial": 2, "communication": 1 } }
+    ]
+  },
+  {
+    "id": "q5",
+    "text": "Your friends would describe you as...",
+    "options": [
+      { "icon": "🗂️", "label": "The planner who keeps things on track", "weights": { "leadership": 2, "analytical": 1 } },
+      { "icon": "✨", "label": "The one with the wildest ideas", "weights": { "creative": 2, "entrepreneurial": 1 } },
+      { "icon": "🫶", "label": "The go-to person for advice", "weights": { "caring": 3, "communication": 1 } },
+      { "icon": "🔍", "label": "The curious one, always asking why", "weights": { "research": 2, "analytical": 1 } }
+    ]
+  },
+  {
+    "id": "q6",
+    "text": "Pick a project you'd actually enjoy finishing:",
+    "options": [
+      { "icon": "💻", "label": "Building an app from scratch", "weights": { "technical": 3, "entrepreneurial": 1 } },
+      { "icon": "📅", "label": "Running a community event", "weights": { "social": 2, "leadership": 2 } },
+      { "icon": "✍️", "label": "Writing a short story or film", "weights": { "creative": 3 } },
+      { "icon": "🐾", "label": "Volunteering at a local shelter", "weights": { "caring": 2, "social": 1 } }
+    ]
+  }
+]

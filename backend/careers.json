@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Data Scientist",
+    "description": "Turns messy data into decisions — building models and finding patterns that guide real choices.",
+    "skills": ["Python", "Statistics", "Machine Learning", "SQL"],
+    "weights": { "analytical": 3, "research": 2, "technical": 2 }
+  },
+  {
+    "title": "UX Designer",
+    "description": "Shapes how products feel to use, blending research and craft into interfaces people enjoy.",
+    "skills": ["Figma", "User Research", "Prototyping", "Visual Design"],
+    "weights": { "creative": 3, "research": 1, "social": 1, "communication": 2 }
+  },
+  {
+    "title": "Robotics Engineer",
+    "description": "Designs and builds physical systems that sense, move, and solve problems in the real world.",
+    "skills": ["CAD", "Embedded Systems", "Python", "Mechanics"],
+    "weights": { "technical": 3, "handsOn": 3, "analytical": 1 }
+  },
+  {
+    "title": "Psychologist",
+    "description": "Helps people understand themselves and work through challenges, grounded in research and empathy.",
+    "skills": ["Active Listening", "Assessment", "Research Methods", "Ethics"],
+    "weights": { "caring": 3, "communication": 2, "research": 1, "social": 1 }
+  },
+  {
+    "title": "Startup Founder",
+    "description": "Turns an idea into a working business, leading a team through constant uncertainty.",
+    "skills": ["Pitching", "Product Strategy", "Fundraising", "Resilience"],
+    "weights": { "entrepreneurial": 3, "leadership": 2, "communication": 1 }
+  },
+  {
+    "title": "Nonprofit Program Manager",
+    "description": "Runs programs that serve communities, balancing people, budgets, and impact.",
+    "skills": ["Program Design", "Grant Writing", "Community Outreach", "Budgeting"],
+    "weights": { "caring": 2, "leadership": 2, "communication": 2, "social": 1 }
+  },
+  {
+    "title": "Software Engineer",
+    "description": "Builds and maintains the systems and applications that power everyday products.",
+    "skills": ["JavaScript", "System Design", "Debugging", "Git"],
+    "weights": { "technical": 3, "analytical": 2, "handsOn": 1 }
+  },
+  {
+    "title": "Marketing Strategist",
+    "description": "Crafts the story behind a product and gets it in front of the right people.",
+    "skills": ["Copywriting", "Campaign Analytics", "Branding", "Storytelling"],
+    "weights": { "creative": 2, "communication": 3, "analytical": 1, "entrepreneurial": 1 }
+  }
+]

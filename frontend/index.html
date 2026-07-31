@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pathfind — Discover Careers That Fit You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+<div id="cursor-glow" aria-hidden="true"></div>
+
+<section id="page-landing" class="page active">
+  <nav class="topnav">
+    <span class="logo">Metanoia<span class="logo-dot">•</span></span>
+  </nav>
+  <div class="hero">
+    <div class="eyebrow">CAREER DISCOVERY ENGINE</div>
+    <h1 class="hero-title">
+      <span class="line"><span>Discover careers</span></span>
+      <span class="line"><span>that actually <span class="accent">fit you</span></span></span>
+    </h1>
+    <p class="hero-sub">Answer a few questions. Get real paths, skills &amp; resources — matched by an engine, not a guess.</p>
+    <button id="start-btn" class="btn-primary">
+      <span>Start Your Journey</span>
+      <span class="btn-arrow">→</span>
+    </button>
+    <div class="hero-footnote">Takes ~3 minutes • No long forms</div>
+  </div>
+  <div class="floating-cards" id="floating-cards"></div>
+</section>
+
+<section id="page-quiz" class="page">
+  <div class="quiz-shell">
+    <div id="entry-step" class="entry-step">
+      <div class="eyebrow">STEP 01</div>
+      <h2 class="step-title">Enter your journey</h2>
+      <p class="step-sub">No forms required — jump straight in</p>
+      <button id="guest-btn" class="btn-primary btn-block">
+        <span>Continue as Guest</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </div>
+    <div id="quiz-step" class="quiz-step hidden">
+      <div class="progress-track">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <div class="quiz-meta">
+        <span id="quiz-count">Question 1 / 6</span>
+        <button id="skip-btn" class="skip-link">Not sure? Skip →</button>
+      </div>
+      <div id="question-wrap" class="question-wrap">
+        <div class="eyebrow" id="q-eyebrow">KNOW YOURSELF</div>
+        <h2 id="question-text" class="question-text"></h2>
+        <div id="options-grid" class="options-grid"></div>
+      </div>
+    </div>
+    <div id="analyzing-step" class="analyzing-step hidden">
+      <div class="loading-ring"></div>
+      <div class="analyzing-text" id="analyzing-text">Analyzing your answers…</div>
+    </div>
+  </div>
+</section>
+
+<section id="page-results" class="page">
+  <div class="results-shell">
+    <div class="results-header">
+      <div class="eyebrow">YOUR MATCHES</div>
+      <h2 class="results-title">Based on your answers, these fit you best</h2>
+      <div class="filter-row" id="filter-row">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="creative">Creative</button>
+        <button class="filter-chip" data-filter="analytical">Analytical</button>
+        <button class="filter-chip" data-filter="caring">Caring</button>
+      </div>
+    </div>
+    <div id="career-grid" class="career-grid"></div>
+    <div id="empty-state" class="empty-state hidden">No matches scored 50% or higher — try retaking the quiz with different answers.</div>
+    <div class="results-actions">
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CHAT WIDGET — floating button + panel, wired up in chat.js    -->
+<!-- ============================================================ -->
+<button id="chat-toggle-btn" class="botbtn" aria-label="Open assistant chat" aria-expanded="false">💬</button>
+<div id="chat-panel" class="panel">
+  <div class="panel-header">Assistant</div>
+  <div id="chat-messages" class="messages"></div>
+  <form id="chat-form" class="forms">
+    <input id="chat-input" type="text" class="textareas" placeholder="Ask a question..." autocomplete="off">
+    <button id="chat-send" class="buttons" type="submit">Send</button>
+  </form>
+</div>
+
+<!-- GSAP — powers all entrance/transition/hover motion, see design.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="app.js"></script>
+<script src="chat.js"></script>
+<script src="design.js"></script>
+</body>
+</html>

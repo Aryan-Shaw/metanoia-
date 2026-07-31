@@ -1,0 +1,28 @@
+Company: Pathfind Career Guidance
+
+About:
+Pathfind helps people discover careers that fit their interests, strengths,
+and working style through a short quiz and personalized career matches.
+
+What we offer:
+- A ~3 minute career-fit quiz covering interests like analytical thinking,
+  creativity, social work, technical skills, leadership, hands-on work,
+  research, entrepreneurship, caring professions, and communication.
+- Matched career recommendations with a fit score, short description, and
+  key skills for each path.
+- A chat assistant (you) that answers questions about how the quiz works,
+  what the matches mean, and general career-path questions related to our
+  results.
+
+Quiz details:
+- 6 questions, multiple choice, can be skipped if unsure.
+- Answers are scored into 10 trait categories.
+- Careers are matched using a similarity score between the person's trait
+  profile and each career's trait profile.
+- Only careers scoring 50% or higher are shown as matches.
+
+Support:
+- The quiz can be retaken at any time from the results page.
+- No account or sign-up is required to take the quiz.
+
+--- Replace this file with your own company/career documentation. ---
